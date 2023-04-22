@@ -14,6 +14,13 @@
     </tr>
   </thead>
   <tbody>
+    {% for movie in movies %}<!-- loop through tasks -->
+            <tr>
+                <td><a href="/movies/{{ movie.movie_id }}">{{ movie.title }}</a></td> <!--return content of each task-->
+                <td>{{ movie.director }}</td>  <!--return date created for each task-->
+                <td>{{ movie.rating }}</td>
+            </tr>
+        {% endfor %}
     <!-- TODO - Render movies in a table with a link on the title to the individual movie page -->
   </tbody>
 </table>
